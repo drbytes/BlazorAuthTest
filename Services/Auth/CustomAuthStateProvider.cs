@@ -8,7 +8,7 @@ namespace BlazorAuth.Services.Auth
 {
     public class CustomAuthStateProvider : AuthenticationStateProvider
     {
-        public static bool Authenticated { get; set ;} = true;
+        public static bool Authenticated { get; set ;}
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
         {
             var claimsIdentity = Authenticated ? new ClaimsIdentity(new List<Claim>
