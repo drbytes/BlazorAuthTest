@@ -34,6 +34,6 @@ Welcome to your new app.
     private async Task UpdateAuthentication(bool isAuthenticated)
     {
        CustomAuthStateProvider.Authenticated = isAuthenticated;
-       CustomAuthStateProvider.NotifyStateChange();
+       await CustomAuthStateProvider.NotifyStateChange();
     }
 }
