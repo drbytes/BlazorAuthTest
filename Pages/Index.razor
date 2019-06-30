@@ -19,10 +19,10 @@ Welcome to your new app.
         @context.User.Identity.Name
     </Authorized>
 </Microsoft.AspNetCore.Components.AuthorizeView>
-<button onclick="@(() => UpdateAuthentication(true))">
+<button @onclick="@(() => UpdateAuthentication(true))">
     Set Auth True
 </button>
-<button onclick="@(() => UpdateAuthentication(false))">
+<button @onclick="@(() => UpdateAuthentication(false))">
     Set Auth False
 </button>
 
