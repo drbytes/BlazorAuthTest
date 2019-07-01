@@ -10,8 +10,8 @@ namespace BlazorAuth
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthorizationCore();
-            services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
             services.AddScoped<CustomAuthStateProvider>();
+            services.AddScoped<AuthenticationStateProvider>(provider => provider.GetRequiredService<CustomAuthStateProvider>());            
         }
 
         public void Configure(IComponentsApplicationBuilder app)
